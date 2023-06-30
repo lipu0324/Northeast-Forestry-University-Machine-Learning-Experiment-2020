@@ -21,7 +21,7 @@
 ### 第三题：KNN人体行为识别
 1. 代码是第三题.py
 2. 运行使用纯CPU，非常慢。
-3. 数据集单独在[百度网盘](https://pan.baidu.com/s/11ltnTMGXeCya-Vwby66jQQ?pwd=0gno)上，使用时请解压到实验二文件夹，解压结果是一个名字叫做“第三题数据集”的文件夹
+3. 数据集单独在[百度网盘](https://pan.baidu.com/s/11ltnTMGXeCya-Vwby66jQQ?pwd=0gno)上，使用时请解压到决策树、朴素贝叶斯、KNN模型文件夹，解压结果是一个名字叫做“第三题数据集”的文件夹
 
 ## BPNN
 
