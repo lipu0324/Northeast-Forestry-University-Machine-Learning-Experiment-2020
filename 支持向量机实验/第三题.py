@@ -1,11 +1,11 @@
 import pandas as pd
 import numpy as np
+import sklearn
 from sklearn import svm
-#from sklearn import  cross_validation
-#from sklearn.model_selection import KFold,cross_val_score #.model_selection.train_test_split
+from sklearn.model_selection import KFold,cross_val_score
 from sklearn.model_selection import  train_test_split
-data=pd.read_csv('stock/000777.csv',encoding='gbk',parse_dates=[0],index_col=0)
-data.sort_index(0,ascending=True,inplace=True)
+data=pd.read_csv('第三题数据集/000777.csv',encoding='gbk',parse_dates=[0],index_col=0)
+data.sort_index(axis=0,ascending=True,inplace=True)
 
 dayfeature=150
 featurenum=5*dayfeature
@@ -27,7 +27,7 @@ clf=svm.SVC(kernel='rbf')
   #调用svm函数，并设置kernel参数，默认是rbf，其它：linear’‘poly’‘sigmoid’
 result = []
 for i in range(5):
-   x_train, x_test, y_train, y_test = model_selection.train_test_split(x, y, test_size = 0.2)
+   x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(x, y, test_size = 0.2)
 #x和y的验证集和测试集，切分80-20%的测试集
 clf.fit(x_train, y_train)
 #训练数据进行训练

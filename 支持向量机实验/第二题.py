@@ -286,7 +286,7 @@ def testRbf(k1=1.3):
     Returns:
         无
     """
-    dataArr, labelArr = loadDataSet('testSetRBF.txt')  # 加载训练集
+    dataArr, labelArr = loadDataSet('第二题数据集/testSetRBF.txt')  # 加载训练集
     b, alphas = smoP(dataArr, labelArr, 200, 0.0001, 100, ('rbf', k1))  # 根据训练集计算b和alphas
     datMat = np.mat(dataArr);
     labelMat = np.mat(labelArr).transpose()
@@ -301,7 +301,7 @@ def testRbf(k1=1.3):
         predict = kernelEval.T * np.multiply(labelSV, alphas[svInd]) + b  # 根据支持向量的点，计算超平面，返回预测结果
         if np.sign(predict) != np.sign(labelArr[i]): errorCount += 1  # 返回数组中各元素的正负符号，用1和-1表示，并统计错误个数
     print("训练集错误率: %.2f%%" % ((float(errorCount) / m) * 100))  # 打印错误率
-    dataArr, labelArr = loadDataSet('testSetRBF2.txt')  # 加载测试集
+    dataArr, labelArr = loadDataSet('第二题数据集/testSetRBF2.txt')  # 加载测试集
     errorCount = 0
     datMat = np.mat(dataArr);
     labelMat = np.mat(labelArr).transpose()

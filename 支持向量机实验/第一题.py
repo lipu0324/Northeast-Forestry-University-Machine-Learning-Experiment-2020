@@ -15,7 +15,7 @@ def loadDataSet(filename):
     return array(dataMat), array(labelMat)
 
 
-data, target = loadDataSet("testSet.txt")
+data, target = loadDataSet("第一题数据集/testSet.txt")
 index1 = where(target == 1)
 X1 = data[index1]
 index2 = where(target == -1)
